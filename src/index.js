@@ -23,7 +23,7 @@ client.setInterval(async () => {
     const botMember = guild.me
     await botMember.setNickname(`${symbol} PRICE $${numberWithCommas(price)}`)
   })
-  client.guilds.cache.get('30')
+
 
   client.user.setActivity(
     `$${numberWithCommas(price)}/ ${numberWithCommas(circSupply)}%`,
