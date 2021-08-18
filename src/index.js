@@ -25,7 +25,7 @@ client.setInterval(async () => {
   })
 
   client.user.setActivity(
-    `$${numberWithCommas(price)}/${numberWithCommas(circSupply)}%`,
+    `${numberWithCommas(price)}/${numberWithCommas(circSupply)}%`,
     { type: 'WATCHING' },
   )
 }, 1 * 60 * 1000)
