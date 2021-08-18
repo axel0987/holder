@@ -9,7 +9,7 @@ exports.fetchData = async () => {
 
     const price = tokenData.market_data.current_price.usd
     const symbol = tokenData.symbol.toUpperCase()
-    const circSupply = tokenData.market_data.price_change_percentage=24
+    const circSupply = tokenData.market_data.price_change_percentage
 
     return { price, symbol, circSupply }
   } catch (err) {
