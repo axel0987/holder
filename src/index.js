@@ -25,7 +25,7 @@ client.setInterval(async () => {
   })
 
   client.user.setActivity(
-    `MC: $${numberWithCommas(Math.round(price * circSupply))}`,
+    `MC: $${numberWithCommas(circSupply)%)}`,
     { type: 'WATCHING' },
   )
 }, 1 * 60 * 1000)
