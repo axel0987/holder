@@ -29,6 +29,6 @@ client.setInterval(async () => {
     `$${numberWithCommas(price)}/ ${numberWithCommas(circSupply)}%`,
     { type: 'WATCHING' },
   )
-}, 1 * 60 * 1000)
+}, 60)
 
 client.login(process.env.DISCORD_API_TOKEN)
