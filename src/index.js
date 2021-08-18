@@ -32,5 +32,3 @@ client.setInterval(async () => {
 }, 1*60*60)
 
 client.login(process.env.DISCORD_API_TOKEN)
-console.log(message.content);
-    if (message.content === '/bopbook')
