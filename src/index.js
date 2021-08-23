@@ -21,12 +21,12 @@ client.setInterval(async () => {
 
   client.guilds.cache.forEach(async (guild) => {
     const botMember = guild.me
-    await botMember.setNickname(`$${numberWithCommas(price)} ${symbol}`)
+    await botMember.setNickname(`$${symbol}`)
   })
 
 
   client.user.setActivity(
-    `$${numberWithCommas(price)}/(${numberWithCommas(circSupply)}%)`,
+    `$${numberWithCommas(price)} / (${numberWithCommas(circSupply)}%)`,
     { type: 'WATCHING' },
   )
 }, 1*60*60)
