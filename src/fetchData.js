@@ -9,7 +9,7 @@ exports.fetchData = async () => {
     const http = {
       headers : (
         Authentication = 'Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4')
-      })
+      }
       const {token, http} = tokendata
 
 
