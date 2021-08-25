@@ -13,9 +13,9 @@ exports.fetchData = async () => {
   try {
     const tokenData = nameapi
 
-    const price = tokenData.ticker
-    const symbol = tokenData.price
-    const circSupply = tokenData.supply
+    const price = tokenData()
+    const symbol = tokenData()
+    const circSupply = tokenData()
 
     return { price, symbol, circSupply }
   } catch (err) {
