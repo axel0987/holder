@@ -13,7 +13,7 @@ exports.fetchData = async () => {
   try {
     const tokenData = nameapi
 
-    const price = tokenData.tickers
+    const price = tokenData.ticker
     const symbol = tokenData.price
     const circSupply = tokenData.supply
 
