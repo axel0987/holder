@@ -11,7 +11,7 @@ const data = fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2
 const {nameapi} = data
 exports.fetchData = async () => {
   try {
-    const tokenData = await(`${nameapi}`).json()
+    const tokenData = nameapi
 
     const price = tokenData.tickers
     const symbol = tokenData.price
