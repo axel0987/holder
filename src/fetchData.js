@@ -9,7 +9,8 @@ exports.fetchData = async () => {
     const headers = {
     Accept = `application/json`,
     Authorization = `Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4`}.json()
-    
+    }
+  }
     const tokendata = {token, header}
 
 
