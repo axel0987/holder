@@ -13,7 +13,7 @@ exports.fetchData = async () => {
     .then(function (response) {
     console.log(response.status);
     return response.json();
-})
+
 
 
 
