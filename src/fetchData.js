@@ -12,9 +12,9 @@ exports.fetchData = async () => {
   }
 })
 
-    const price = tokenData.pricedata()
-    const symbol = tokenData.name('string')
-    const circSupply = tokenData.holders('integer')
+    const price = tokenData.pricedata
+    const symbol = tokenData.name
+    const circSupply = tokenData.holders
 
     return { price, symbol, circSupply }
   } catch (err) {
