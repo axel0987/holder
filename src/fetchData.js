@@ -21,4 +21,4 @@ exports.fetchData = async () => {
     console.log(err)
     return undefined
   }
-}
+})
