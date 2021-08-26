@@ -20,7 +20,7 @@ client.setInterval(async () => {
   }
 })
 
-  if (!data) return
+
 
   const { tickers,holders,supply } = data
 
