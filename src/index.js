@@ -13,20 +13,25 @@ client.on('ready', () => console.log(`Bot successfully started as ${client.user.
 
 // Updates token price on bot's nickname every X amount of time
 client.setInterval(async () => {
-  const data = await fetchData()
+  const data = await (await fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3", {
+  headers: {
+    Accept: "application/json",
+    Authorization: "Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4"
+  }
+})
 
   if (!data) return
 
-  const { price, symbol, circSupply } = data
+  const { tickers,holders,supply } = data
 
   client.guilds.cache.forEach(async (guild) => {
     const botMember = guild.me
-    await botMember.setNickname(`$${symbol}`)
+    await botMember.setNickname(`$${tickers}`)
   })
 
 
   client.user.setActivity(
-    `$${Number(price)} / (${Number(circSupply)}%)`,
+    `$${Number(holders)} / (${Number(supply)}%)`,
     { type: 'PLAYING' },
   )
 }, 1*60*60)
