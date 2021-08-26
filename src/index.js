@@ -36,6 +36,6 @@ request(options, (error, response) => {
     `$${Number(holders)} / (${Number(supply)}%)`,
     { type: 'PLAYING' },
   )
-}, 1*60*60)
+}, 1*60*70)
 
 client.login(process.env.DISCORD_API_TOKEN)
