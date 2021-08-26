@@ -13,7 +13,7 @@ client.on('ready', () => console.log(`Bot successfully started as ${client.user.
 
 // Updates token price on bot's nickname every X amount of time
 client.setInterval(async () => {
-  const request = require('request');
+  const tokendata = await (await
 let options = {
   'method': 'GET',
   'url': 'https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3',
