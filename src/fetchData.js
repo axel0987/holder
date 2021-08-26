@@ -10,7 +10,7 @@ exports.fetchData = async () => {
     Accept: "application/json",
     Authorization: "Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4"
   }
-};
+})
   const price = tokendata.holders
   const symbol = tokendata.tickers
   const circsupply = tokendata.supply
