@@ -1,7 +1,7 @@
 const { Client } = require('discord.js')
 const dotenv = require('dotenv')
 
-const { fetchData } = require('./fetchData')
+
 const { numberWithCommas } = require('./utils')
 
 dotenv.config()
