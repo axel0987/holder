@@ -15,11 +15,11 @@ exports.fetchData = async () => {
     let tokenData = await res.json()
 
 
-    const price = tokenData.ticker
-    const symbol = tokenData.holders
-    const circSupply = tokenData.supply
+    let price = tokenData.ticker
+    let symbol = tokenData.holders
+    let circSupply = tokenData.supply
 
-    return { price, symbol, circSupply }
+    return Number{ price, symbol, circSupply }
   } catch (err) {
     console.log(err)
     return undefined
