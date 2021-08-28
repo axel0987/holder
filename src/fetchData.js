@@ -11,7 +11,7 @@ let url = `https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVC
   };
 exports.fetchData = async () => {
   try {
-    let tokenData = await fetch(url, settings)
+    let res = await fetch(url, settings)
     let tokenData = await res.json()
 
 
