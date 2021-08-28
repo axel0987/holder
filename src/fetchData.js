@@ -14,7 +14,7 @@ const fetchFloor = async () => {
   };
 exports.fetchData = async () => {
   try {
-    let tokenData = await fetch(url, settings);
+    let tokenData = await fetch(url, settings).json()
 
 
     const price = tokenData.ticker
