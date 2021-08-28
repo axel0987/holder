@@ -15,7 +15,7 @@ exports.fetchData = async () => {
 
 
     const price = tokenData.ticker
-    const symbol = tokenData.symbol
+    const symbol = tokenData.holders
     const circSupply = tokenData.supply
 
     return { price, symbol, circSupply }
