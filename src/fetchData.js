@@ -12,6 +12,14 @@ let url = `https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVC
 exports.fetchData = async () => {
   try {
     let res = await fetch(url, settings)
+    if (res.status == 404 || res.status == 400)
+  {
+    throw new Error("Token id doesn't exist.");
+  }
+  if (res.status != 200)
+  {
+    throw new Error(`Couldn't retrieve metadata: ${res.statusText}`);
+  }
     let tokenData = await res.json()
 
 
@@ -19,7 +27,7 @@ exports.fetchData = async () => {
     let symbol = tokenData.holders
     let circSupply = tokenData.supply
 
-    return Number{ price, symbol, circSupply }
+    return { price, symbol, circSupply }
   } catch (err) {
     console.log(err)
     return undefined
