@@ -14,8 +14,8 @@ const fetchFloor = async () => {
   };
 exports.fetchData = async () => {
   try {
-    let res = await fetch(url, settings);
-    const res = tokenData
+    let tokenData = await fetch(url, settings);
+    const {price = tokenData
 
     const price = tokenData.ticker
     const symbol = tokenData.symbol
