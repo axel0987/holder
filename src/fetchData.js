@@ -14,6 +14,7 @@ const options = {
 };
 
 const res = await (await fetch(url, options)).json()
+const {name, price, volume, change, marketcap, holders, swapVolume, swapPrice, marketVolume, marketPrice } = res [0]
 
                    const prices = res.price
     const symbol = res.ticker
