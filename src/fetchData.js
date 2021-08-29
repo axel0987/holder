@@ -19,7 +19,7 @@ fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-    let tokenData = await fetch(myheaDers, requestOptions)
+    let tokenData = await fetch(myheaders, requestOptions)
     
 
     let price = tokenData.ticker
