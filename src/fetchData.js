@@ -5,7 +5,7 @@ dotenv.config()
 
 exports.fetchData = async () => {
   try {
-    const url = 'https://api.solanabeach.io/v1/tokens?sortBy=name, price, volume, change, marketcap, holders, swapVolume, swapPrice, marketVolume, marketPrice';
+    const url = 'https://api.solanabeach.io/v1/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3?sortBy=name, price, volume, change, marketcap, holders, swapVolume, swapPrice, marketVolume, marketPrice';
 
 const options = {
   headers: {
