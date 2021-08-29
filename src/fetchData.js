@@ -5,11 +5,20 @@ dotenv.config()
 
 exports.fetchData = async () => {
   try {
-    const tokenData = await (await fetch(`https://api.coingecko.com/api/v3/coins/${process.env.TOKEN_ID}`)).json()
+    const url = 'https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3';
 
-    const price = tokenData.market_data.current_price.usd
-    const symbol = tokenData.symbol.toUpperCase()
-    const circSupply = tokenData.market_data.price_change_percentage_24h
+const options = {
+  headers: {
+    Authorization: 'Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4'
+  }
+};
+
+fetch(url, options)
+  .then( res => res.json() )
+
+    const price = res.priceData
+    const symbol = res.ticker
+    const circSupply = res.supply
 
     return { price, symbol, circSupply }
   } catch (err) {
