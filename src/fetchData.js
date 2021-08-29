@@ -5,21 +5,18 @@ dotenv.config()
 
 exports.fetchData = async () => {
   try {
-    let myHeaders = new Headers();
-myHeaders.append("accept", "application/json");
-myHeaders.append("Authorization", "Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4");
 
    let requestOptions = {
   method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
+  headers: 'application/json',
+  Authorization: 'Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4'
 };
 
-fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3", requestOptions)
+const tokenData = await (await fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-    let tokenData = await fetch(myheaders, requestOptions)
+
     
 
     let price = tokenData.ticker
