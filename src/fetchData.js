@@ -20,7 +20,7 @@ const res = await (await fetch(url, options)).json()
     const circSupply = res.holders
     const duaempat = res.percent_change_24h
 
-    return { price, symbol, circSupply, duaempat }
+    return { prices, symbol, circSupply, duaempat }
   } catch (err) {
     console.log(err)
     return undefined
