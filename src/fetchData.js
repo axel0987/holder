@@ -5,7 +5,7 @@ dotenv.config()
 
 exports.fetchData = async () => {
   try {
-    const url = 'https://api.solanabeach.io/v1/tokens/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3';
+    const url = 'https://api.solanabeach.io/v1/tokens/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3?sort=price';
 
 const options = {
   headers: {
@@ -15,10 +15,10 @@ const options = {
 
 const res = await (await fetch(url, options)).json()
 
-                   const price = res.sort=price
+                   const price = res.price
     const symbol = res.ticker
     const circSupply = res.holders
-    const duaempat = res.sort=percent_change_24h
+    const duaempat = res.percent_change_24h
 
     return { price, symbol, circSupply, duaempat }
   } catch (err) {
