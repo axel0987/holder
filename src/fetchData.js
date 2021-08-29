@@ -13,13 +13,13 @@ const options = {
   }
 };
 
-const res = await (await fetch(url, options))
-const {name, price, volume, change, marketcap, holders, swapVolume, swapPrice, marketVolume, marketPrice } = res.json()
+const res = await (await fetch(url, options)).json()
 
-                   const prices = res.price
-    const symbol = res.ticker
+
+                   const prices = res.ticker
+    const symbol = res.logo
     const circSupply = res.holders
-    const duaempat = res.percent_change_24h
+    const duaempat = res.supply
 
     return { prices, symbol, circSupply, duaempat }
   } catch (err) {
