@@ -16,9 +16,9 @@ const options = {
 const res = await (await fetch(url, options)).json()
 
 
-                   const prices = res.ticker
-    const symbol = res.logo
-    const circSupply = res.holders
+                   const prices = res.meta.marketPrice
+    const symbol = res.ticker
+    const circSupply = res.holder
     const duaempat = res.supply
 
     return { prices, symbol, circSupply, duaempat }
