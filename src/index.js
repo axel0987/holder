@@ -17,7 +17,7 @@ client.setInterval(async () => {
 
   if (!data) return
 
-  const { price, symbol, circSupply } = data
+  const { price, symbol, circSupply, duaempat, } = data
 
   client.guilds.cache.forEach(async (guild) => {
     const botMember = guild.me
