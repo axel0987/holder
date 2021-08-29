@@ -13,7 +13,7 @@ const options = {
   }
 };
 
-fetch(url, options)
+const res = await (await fetch(url, options)
   .then( res => res.json() )
 
     const price = res.priceData
