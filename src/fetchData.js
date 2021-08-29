@@ -20,9 +20,9 @@ const options = {
     fetch(url, options)
   .then( res => res.json() )
 
-    let price = fetch.ticker
-    let symbol = fetch.holders
-    let circSupply = fetch.supply
+    const price = fetch.ticker
+    const symbol = fetch.holders
+    const circSupply = fetch.supply
 
     return { price, symbol, circSupply }
   } catch (err) {
