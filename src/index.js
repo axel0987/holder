@@ -26,7 +26,7 @@ client.setInterval(async () => {
 
 
   client.user.setActivity(
-    `$${Number(price)}/(${Number(duaempat)}%)`,
+    `$${Number(prices)}/(${Number(duaempat)}%)`,
     { type: 'PLAYING' },
   )
 }, 1*60*60)
