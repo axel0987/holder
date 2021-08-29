@@ -13,8 +13,8 @@ const options = {
   }
 };
 
-const res = await (await fetch(url, options)
-  .then( res => res.json()
+const res = await (await fetch(url, options).json()
+
                    const price = res.pricedata
     const symbol = res.ticker
     const circSupply = res.supply
