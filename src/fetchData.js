@@ -9,7 +9,7 @@ exports.fetchData = async () => {
   let settings = { 
     method: "GET",
     headers: {
-      "X-API-KEY": process.env.API_KEY
+      "X-API-KEY": "bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4"
     }
   };
     let res = await fetch(url, settings)
