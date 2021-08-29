@@ -9,20 +9,20 @@ let requestOptions = {
   }
 exports.fetchData = async () => {
   try {
+    const url = 'https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3';
 
-
-
-
-const tokenData = await (await fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3", requestOptions)).json()
-
-
-
-
+const options = {
+  headers: {
+    Authorization: 'Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4'
+  }
+};
     
+    fetch(url, options)
+  .then( res => res.json() )
 
-    let price = tokenData.ticker
-    let symbol = tokenData.holders
-    let circSupply = tokenData.supply
+    let price = fetch.ticker
+    let symbol = fetch.holders
+    let circSupply = fetch.supply
 
     return { price, symbol, circSupply }
   } catch (err) {
