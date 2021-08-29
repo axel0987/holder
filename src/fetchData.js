@@ -5,24 +5,22 @@ dotenv.config()
 
 exports.fetchData = async () => {
   try {
-    let url = fetch(`https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3`);
-  let settings = { 
-    method: "GET",
-    headers: {
-      "X-API-KEY": "bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4"
-    }
-  };
-    let res = await fetch(url, settings)
-    if (res.status == 404 || res.status == 400)
-  {
-    throw new Error("Token id doesn't exist.");
-  }
-  if (res.status != 200)
-  {
-    throw new Error(`Couldn't retrieve metadata: ${res.statusText}`);
-  }
-    let tokenData = await res.json()
+    let myHeaders = new Headers();
+myHeaders.append("accept", "application/json");
+myHeaders.append("Authorization", "Bearer 70d4ef96-0cfc-4e8d-be5a-6e15569b40b4");
 
+   let requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://api.solanabeach.io/v1/token/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+    let tokenData = await fetch(myheaDers, requestOptions)
+    
 
     let price = tokenData.ticker
     let symbol = tokenData.holders
