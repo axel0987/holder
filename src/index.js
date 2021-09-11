@@ -26,8 +26,8 @@ client.setInterval(async () => {
 
 
   client.user.setActivity(
-    `Max Supply/(${Number(duaempat)}%)`,
-    { type: 'PLAYING' },
+    `(${Number(duaempat)})`,
+    { type: 'MAX SUPPLY' },
   )
 }, 1*60*60)
 
