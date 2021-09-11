@@ -26,7 +26,7 @@ client.setInterval(async () => {
 
 
   client.user.setActivity(
-    `(${Number(duaempat):10000000})`,
+    `(${Number(duaempat:10000000)})`,
     { type: 'PLAYING' },
   )
 }, 1*60*60)
