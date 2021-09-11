@@ -21,12 +21,12 @@ client.setInterval(async () => {
 
   client.guilds.cache.forEach(async (guild) => {
     const botMember = guild.me
-    await botMember.setNickname(`${Number(circSupply)}Holder')
+    await botMember.setNickname(`${Number(circSupply)} Holder')
   })
 
 
   client.user.setActivity(
-    `(${Number(duaempat/10000000)})`,
+    `SUPPY: (${Number(duaempat/1000000000000)})`,
    { type: 'PLAYING' },
   )
 }, 1*60*60)
