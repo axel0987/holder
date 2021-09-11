@@ -27,7 +27,7 @@ client.setInterval(async () => {
 
   client.user.setActivity(
     `(${Number(duaempat/10000000)})`,
-    { type: 'SUPPLY' },
+
   )
 }, 1*60*60)
 
