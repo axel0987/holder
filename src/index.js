@@ -27,7 +27,7 @@ client.setInterval(async () => {
 
   client.user.setActivity(
     `(${Number(duaempat)})`,
-    { type: 'MAX SUPPLY' },
+    { type: 'PLAYING' },
   )
 }, 1*60*60)
 
