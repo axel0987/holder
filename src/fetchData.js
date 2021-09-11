@@ -5,7 +5,7 @@ dotenv.config()
 
 exports.fetchData = async () => {
   try {
-    const url = 'https://api.solanabeach.io/v1/account/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3';
+    const url = 'https://api.solanabeach.io/v1/tokens/BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3';
 
 const options = {
   headers: {
