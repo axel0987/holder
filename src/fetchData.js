@@ -13,10 +13,10 @@ const options = {
   }
 };
 
-const res = await (await fetch(url, options))
+const res = await (await fetch(url, options)).json()
 
 
-                   const prices = res.meta.marketPrice
+                   const prices = res.holders
     const symbol = res.ticker
     const circSupply = res.holders
     const duaempat = res.supply
